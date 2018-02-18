@@ -1,6 +1,6 @@
 {
   "name": "react-localstorage-sync",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A higher order component that sync localStorage and components state",
   "main": "dist/withLocalStorage.js",
   "license": "MIT",

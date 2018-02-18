@@ -66,7 +66,7 @@ You can quickly add persistence to the state by following 4 steps:
 2. Get saved state from localStorage when component mounts.
 ```js
   componentDidMount() {
-    this.setState(this.getStateFromLocalStorage(this));
+    this.setState(this.props.getStateFromLocalStorage(this));
   }
 ```
 
@@ -85,7 +85,7 @@ You can quickly add persistence to the state by following 4 steps:
     }
 
     componentDidMount() {
-      this.setState(this.getStateFromLocalStorage(this));
+      this.setState(this.props.getStateFromLocalStorage(this));
     }
 
     increaseStateCount = (keyName) => {
