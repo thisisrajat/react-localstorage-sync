@@ -1,10 +1,13 @@
 {
   "name": "react-localstorage-sync",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A higher order component that sync localStorage and components state",
-  "main": "./src/withLocalStorage.js",
+  "main": "dist/withLocalStorage.js",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "prepublish": "npm run build"
+  },
   "peerDependencies": {
     "prop-types": "^15.3.0",
     "react": "^15.3.0 || ^16.0.0",
@@ -13,8 +16,7 @@
   "dependencies": {
     "prop-types": "^15.3.0",
     "react": "^15.3.0 || ^16.0.0",
-    "react-dom": "^15.3.0 || ^16.0.0",
-    "react-localstorage-sync": "0.0.2"
+    "react-dom": "^15.3.0 || ^16.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
