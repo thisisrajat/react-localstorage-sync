@@ -1,4 +1,5 @@
 var path = require('path')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, 'src/withLocalStorage.js'),
@@ -9,6 +10,14 @@ module.exports = {
     library: 'withLocalStorage',
     libraryTarget: 'umd',
   },
+
+  devtool: 'source-map',
+
+  plugins: [
+    new UglifyJSPlugin({
+      sourceMap: true
+    })
+  ],
 
   module: {
     loaders: [
