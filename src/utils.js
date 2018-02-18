@@ -15,5 +15,5 @@ export function getNamespace(WrapperComponent, WrapperComponentInstance) {
     return WrapperComponent.localStorageNamespace(WrapperComponentInstance.props, WrapperComponentInstance.state);
   }
 
-  console.error('need to define a key');
+  console.error('Namespace is missing for the wrapped component. Make sure your component has localStorageNamespace present.');
 }

@@ -8,7 +8,11 @@ function withLocalStorage(WrapperComponent, options) {
   function localStorageMiddleWare (callback, _this) {
     const stateObj = pick(_this.state, keysToSync);
     const namespace = getNamespace(WrapperComponent, _this);
-    localStorage.setItem(namespace, JSON.stringify(stateObj));
+    try {
+      localStorage.setItem(namespace, JSON.stringify(stateObj));
+    } catch (e) {
+      console.error(e);
+    }
     callback.call(_this);
   }
 
