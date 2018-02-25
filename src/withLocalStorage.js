@@ -46,7 +46,6 @@ function withLocalStorage(WrapperComponent, options) {
         <WrapperComponent
           getStateFromLocalStorage={this.getStateFromLocalStorage}
           ref={this.setUp}
-          id="1"
         />
       );
     }
